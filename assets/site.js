@@ -134,6 +134,8 @@
   }
   function startLive(panel) {
     var remote = panel.getAttribute("data-remote"), local = panel.getAttribute("data-local");
+    var onLaptop = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+    if (onLaptop) remote = "";  // served by ./creature serve: read live status straight from the disk
     function load() {
       var bust = "?t=" + Math.floor(Date.now() / 60000);
       var first = remote ? fetch(remote + bust, { cache: "no-store" }) : Promise.reject();
@@ -143,6 +145,6 @@
         .catch(function () { panel.querySelector("[data-live-state]").textContent = "status unavailable right now"; });
     }
     load();
-    setInterval(load, 60000);
+    setInterval(load, onLaptop ? 15000 : 60000);
   }
 })();
