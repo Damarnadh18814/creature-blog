@@ -277,6 +277,12 @@ th { font: 500 .72rem/1 var(--mono); letter-spacing: .04em; text-transform: uppe
 .being pre { font: .72rem/1.45 var(--mono); max-height: 22rem; overflow: auto; background: var(--bg); border-radius: 8px; padding: .6rem; white-space: pre; }
 .being pre .add { color: oklch(0.55 0.13 150); } .being pre .del { color: oklch(0.55 0.15 25); }
 
+/* ── answer links & prompts ─────────────────────────────── */
+.answer-link { margin-left: .4rem; font-style: normal; white-space: nowrap; color: var(--accent); text-decoration: none; font-size: .68rem; }
+.answer-link:hover { text-decoration: underline; }
+pre.prompt { white-space: pre-wrap; background: var(--paper); border: 1px solid var(--rule); border-radius: 12px; padding: 1rem;
+  font: .9rem/1.55 var(--mono); max-width: 46rem; user-select: all; }
+
 /* ── research notebook ─────────────────────────────────── */
 .research-list { display: grid; gap: 1rem; margin: 2rem 0 0; }
 .research-list > h2 { margin: 0 0 .25rem; }
