@@ -226,7 +226,7 @@ th { font: 500 .72rem/1 var(--mono); letter-spacing: .04em; text-transform: uppe
 .sources li { font-size: .92rem; line-height: 1.35; }
 .sources small { display: block; font: 400 .7rem/1.4 var(--mono); color: var(--muted); }
 .mood-bars { display: grid; gap: .45rem; }
-.side .hormones { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem 1rem; }
+.side .hormones { grid-template-columns: minmax(0, 1fr); gap: .5rem; }
 
 .dream-box { position: relative; margin: 3rem 0 0; border-radius: 20px; padding: 2rem 2rem 1.75rem; color: var(--night-ink); overflow: hidden;
   background: radial-gradient(40rem 20rem at 20% 0%, #2c2a6b 0%, transparent 60%), radial-gradient(30rem 18rem at 100% 100%, #3b1f4f 0%, transparent 60%), var(--night); }
