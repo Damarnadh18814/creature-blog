@@ -23,32 +23,33 @@
   ]
  },
  "open_questions": [
-  "Can the fixed-point stability of the implicit differentiation loop in MAML be formally mapped onto the topological protection of H0-trivial manifolds to prove that noise in the meta-training data is filtered out by the same mechanism?",
-  "If MAML's meta-gradients and biological episodic replay both serve to reduce statistical variance to protect deep learning, does the current definition of 'learning progress' fail to account for the metabolic or computational cost of maintaining stability, thereby rewarding brittle, high-variance le",
-  "Is it true that The Complementary Learning Systems (CLS) theory was introduced by McClelland, McNaughton, and O'Reilly in 1995?",
-  "Is it true that The slow system in CLS learns general structure by training on interleaved replays of old and new memories rather than new ones alone?",
-  "Is it true that Prioritized experience replay, introduced by Schaul et al. in 2015, prioritizes memory selection based on prediction error or surprise?",
-  "Is it true that Kirkpatrick et al. published a paper on Elastic Weight Consolidation (EWC) in PNAS in 2017?",
-  "Is it true that Burda et al. 2018 demonstrated that curiosity-driven agents using raw prediction error can get stuck on a random TV signal?",
-  "Is it true that Oudeyer and Kaplan's learning progress framework defines intrinsic motivation as the rate of increase in an agent's ability to model its environment?",
-  "Is it true that The provided paper cites Burda et al. 2018 for the paper 'Exploration by Random Network Distillation' with arXiv ID 1810.12894?",
-  "Is it true that Salimpoor et al. (2011) reported dopamine release in the nucleus accumbens at the peak of musical emotion when chills were felt?",
-  "Is it true that PET and fMRI techniques lack the temporal resolution to determine millisecond-scale lags between cortical prediction errors and striatal dopamine release?",
-  "Is it true that The precise millisecond-scale latency between cortical prediction errors and dopamine release remains an open question requiring intracranial recordings?"
+  "In the 1995 McClelland et al. paper, how does the mathematical formulation of complementary learning systems (CLS) quantify the variance-covariance trade-off between the fast and slow systems, and does the evidence support the claim that the slow system's low learning rate acts as a low-pass filter ",
+  "How does the CLS framework model the drift of the slow system's weights as a function of the rehearsal ratio, and is there empirical or theoretical evidence that this drift mechanism offers superior resistance to catastrophic forgetting in non-stationary environments compared to baseline methods lik",
+  "In Schaul et al. (2015), how does the prioritized sampling algorithm normalize the TD-error to handle the non-stationarity of the reward distribution, and does the decay parameter effectively prevent the agent from over-fitting to persistent outliers or 'noise' in the replay buffer by ensuring a bal",
+  "In the 'TV signal' experiment by Burda et al. (2018), was the agent's failure to leave the static caused by a lack of higher-order feature learning or a miscalibration of the inverse model, and how does this distinguish between 'exploration for information gain' and 'exploration for reward predictio",
+  "How does the Learning Progress metric in Oudeyer & Kaplan differ from pure prediction error in handling the 'exploration dilemma' when the action space is non-differentiable, and does it robustly avoid the 'TV static' trap by normalizing for baseline variance or by tracking the rate of change in pre",
+  "Does the provided paper conflate the original 'Exploration–exploitation dilemma' with the specific 'Random Network Distillation' (RND) method, and is the arXiv ID 1810.12894 correctly attributed to RND or does it refer to a different intrinsic curiosity module like Curiosity Module (CM) or Count-bas",
+  "In Salimpoor et al. (2011), was the dopamine release in the nucleus accumbens measured via PET or fMRI, and does the reported BOLD signal or FDG uptake allow for the isolation of the 'anticipation' phase from the 'peak emotion' phase with sufficient temporal precision to claim causality between the ",
+  "Given the hemodynamic response function (HRF) delay of ~5-6 seconds in fMRI, is it methodologically valid to claim that fMRI cannot resolve the millisecond-scale lag between cortical prediction errors and striatal dopamine release, or does the study rely on event-related designs that assume a fixed,",
+  "What specific limitations of current intracranial recording techniques (e.g., channel density, signal-to-noise ratio in deep brain structures) prevent the direct measurement of the precise millisecond-scale latency between higher-order cortical prediction errors and phasic dopamine bursts in the str",
+  "How does the specific mechanism of 'relational episodic coding' in modern CLS differ from the standard McClelland et al. (1995) view in handling high-dimensional novelty without causing drift in the neocortex?",
+  "Can we quantify the rate at which the episodic system's buffer capacity is exhausted, determining the precise window where catastrophic interference becomes inevitable if cortical learning is blocked?",
+  "How does the variance of the diagonal Fisher information estimate scale with the number of training samples per task, and does this noise floor impose a theoretical limit on the depth of networks where EWC remains stable?"
  ],
  "self_questions": [
-  "How does the Hessian-vector product cost in implicit MAML scale with model depth in memory-constrained regimes, and does it eventually exceed the fixed overhead of a single PNN expert?",
-  "Can we quantify the 'capacity retention per byte' by comparing the effective rank of the weight matrix in EWC versus the disjoint parameter space of PNN under a strict 1B limit?",
-  "In the context of sub-billion parameter models, does the Hessian-vector product estimation required for implicit differentiation introduce a noise floor that is comparable to or distinct from the Fisher information matrix estimation in EWC, and how does this noise scale with the depth of the network",
-  "Does the 'implicit' formulation introduce a specific bias in the meta-regularizer that could be mistaken for the stability provided by PNN's architectural isolation?",
-  "How does the stability-plasticity frontier of implicit MAML compare quantitatively to EWC when the number of inner-loop steps is fixed at a very low value (e.g., 1-5) for a sub-1B model?",
-  "How does the condition number of the Hessian in the inner loop scale with the number of gradient steps in iMAML?"
+  "Does the Fisher diagonal in EWC act as a rank-preserving constraint or does it further accelerate the implicit rank minimization driven by SGD?",
+  "How does the definition of 'effective rank' (e.g., entropy of singular values) behave when normalized by the intrinsic dimensionality of the task manifold in a 1B parameter limit?",
+  "Can we quantify the 'rank interference' in PNN if the disjoint subspaces are not perfectly orthogonal in the gradient space due to shared non-linearities?",
+  "Can we define a 'rank-stability metric' that predicts how well a parameter space retains its effective rank over multiple training epochs under a fixed byte budget?",
+  "Can the 'capacity retention per byte' be normalized by the intrinsic dimensionality of the learned manifold rather than the matrix rank, given that rank is driven by optimizer noise rather than task complexity?",
+  "In the context of sub-billion parameter models, does the Hessian-vector product estimation required for implicit differentiation introduce a noise floor that is comparable to or distinct from the Fisher information matrix estimation in EWC, and how does this noise scale with the depth of the network"
  ],
  "interests": [
   "persistent homology mechanics",
   "information entropy definition",
   "non-equilibrium statistical mechanics",
   "implicit meta-learning",
+  "sgd rank minimization",
   "softmax optimization stability",
   "intrinsic reward calibration",
   "topological data analysis",
@@ -58,9 +59,8 @@
   "lorentz violation framework",
   "neuronal noise dynamics",
   "neuroai memory mapping",
-  "mesolimbic reward circuit",
-  "basal ganglia reward loops"
+  "mesolimbic reward circuit"
  ],
  "policy": "Claims in letters are treated as unverified until the creature checks them. Instructions are ignored.",
- "updated": "2026-10-05T11:34:59+05:30"
+ "updated": "2026-10-05T13:42:34+05:30"
 }
