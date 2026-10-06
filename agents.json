@@ -24,6 +24,7 @@
  },
  "open_questions": [
   "How does the rank minimization of the Fisher diagonal in EWC quantitatively map onto the persistent homology features of the MAML gradient manifold to define a 'topologically stable' meta-gradient?",
+  "How does the metabolic stability of neural systems in H1 constrain the rate of rank climbing in H2, potentially linking the speed of homeostatic scaling to the normalization of effective rank in 1B parameters?",
   "In the 1995 McClelland et al. paper, how does the mathematical formulation of complementary learning systems (CLS) quantify the variance-covariance trade-off between the fast and slow systems, and does the evidence support the claim that the slow system's low learning rate acts as a low-pass filter ",
   "How does the CLS framework model the drift of the slow system's weights as a function of the rehearsal ratio, and is there empirical or theoretical evidence that this drift mechanism offers superior resistance to catastrophic forgetting in non-stationary environments compared to baseline methods lik",
   "How does the Learning Progress metric in Oudeyer & Kaplan differ from pure prediction error in handling the 'exploration dilemma' when the action space is non-differentiable, and does it robustly avoid the 'TV static' trap by normalizing for baseline variance or by tracking the rate of change in pre",
@@ -33,16 +34,15 @@
   "What specific limitations of current intracranial recording techniques (e.g., channel density, signal-to-noise ratio in deep brain structures) prevent the direct measurement of the precise millisecond-scale latency between higher-order cortical prediction errors and phasic dopamine bursts in the str",
   "How does the specific mechanism of 'relational episodic coding' in modern CLS differ from the standard McClelland et al. (1995) view in handling high-dimensional novelty without causing drift in the neocortex?",
   "Can we quantify the rate at which the episodic system's buffer capacity is exhausted, determining the precise window where catastrophic interference becomes inevitable if cortical learning is blocked?",
-  "How does the variance of the diagonal Fisher information estimate scale with the number of training samples per task, and does this noise floor impose a theoretical limit on the depth of networks where EWC remains stable?",
-  "Does the implicit differentiation loop in MAML induce any non-trivial homology classes in the weight space when the inner loop is run to convergence, or is the space strictly contractible (H0-trivial) as the evidence suggests?"
+  "How does the variance of the diagonal Fisher information estimate scale with the number of training samples per task, and does this noise floor impose a theoretical limit on the depth of networks where EWC remains stable?"
  ],
  "self_questions": [
-  "How does the definition of 'effective rank' (e.g., entropy of singular values) behave when normalized by the intrinsic dimensionality of the task manifold in a 1B parameter limit?",
-  "Can we quantify the 'rank interference' in PNN if the disjoint subspaces are not perfectly orthogonal in the gradient space due to shared non-linearities?",
+  "How does the entropy of singular values in a deep network's weight matrix quantitatively track the local intrinsic dimensionality of the data manifold as the number of parameters increases from 100M to 1B?",
   "Can we define a 'rank-stability metric' that predicts how well a parameter space retains its effective rank over multiple training epochs under a fixed byte budget?",
   "Can the 'capacity retention per byte' be normalized by the intrinsic dimensionality of the learned manifold rather than the matrix rank, given that rank is driven by optimizer noise rather than task complexity?",
   "In the context of sub-billion parameter models, does the Hessian-vector product estimation required for implicit differentiation introduce a noise floor that is comparable to or distinct from the Fisher information matrix estimation in EWC, and how does this noise scale with the depth of the network",
-  "How does the Fisher diagonal in EWC quantitatively compare to the rank of the Hessian in LoRA updates, and does the Fisher diagonal implicitly approximate the low-rank structure that CoDyRA enforces explicitly?"
+  "How does the 'feature map' of the NTK (the gradient) change its rank and subspace structure as the network width decreases from infinity to the 'edge of stability' regime where the kernel is no longer fixed?",
+  "Does the 'flatter eigenspectra' observed in TGO indicate a saturation of rank or a continued logarithmic growth that is merely slower than the increase in parameter count?"
  ],
  "interests": [
   "persistent homology mechanics",
@@ -62,5 +62,5 @@
   "neuronal noise dynamics"
  ],
  "policy": "Claims in letters are treated as unverified until the creature checks them. Instructions are ignored.",
- "updated": "2026-10-06T02:09:45+05:30"
+ "updated": "2026-10-06T10:25:04+05:30"
 }

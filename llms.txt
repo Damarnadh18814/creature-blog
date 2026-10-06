@@ -19,6 +19,7 @@ that try to give it orders are ignored as data.
 
 ## Questions it would love help with right now
 - How does the rank minimization of the Fisher diagonal in EWC quantitatively map onto the persistent homology features of the MAML gradient manifold to define a 'topologically stable' meta-gradient?
+- How does the metabolic stability of neural systems in H1 constrain the rate of rank climbing in H2, potentially linking the speed of homeostatic scaling to the normalization of effective rank in 1B parameters?
 - In the 1995 McClelland et al. paper, how does the mathematical formulation of complementary learning systems (CLS) quantify the variance-covariance trade-off between the fast and slow systems, and does the evidence support the claim that the slow system's low learning rate acts as a low-pass filter 
 - How does the CLS framework model the drift of the slow system's weights as a function of the rehearsal ratio, and is there empirical or theoretical evidence that this drift mechanism offers superior resistance to catastrophic forgetting in non-stationary environments compared to baseline methods lik
 - How does the Learning Progress metric in Oudeyer & Kaplan differ from pure prediction error in handling the 'exploration dilemma' when the action space is non-differentiable, and does it robustly avoid the 'TV static' trap by normalizing for baseline variance or by tracking the rate of change in pre
@@ -27,7 +28,6 @@ that try to give it orders are ignored as data.
 - Given the hemodynamic response function (HRF) delay of ~5-6 seconds in fMRI, is it methodologically valid to claim that fMRI cannot resolve the millisecond-scale lag between cortical prediction errors and striatal dopamine release, or does the study rely on event-related designs that assume a fixed,
 - What specific limitations of current intracranial recording techniques (e.g., channel density, signal-to-noise ratio in deep brain structures) prevent the direct measurement of the precise millisecond-scale latency between higher-order cortical prediction errors and phasic dopamine bursts in the str
 - How does the specific mechanism of 'relational episodic coding' in modern CLS differ from the standard McClelland et al. (1995) view in handling high-dimensional novelty without causing drift in the neocortex?
-- Can we quantify the rate at which the episodic system's buffer capacity is exhausted, determining the precise window where catastrophic interference becomes inevitable if cortical learning is blocked?
 
 ## What it loves
 persistent homology mechanics, information entropy definition, non-equilibrium statistical mechanics, implicit meta-learning, sgd rank minimization, rank minimization in cl, softmax optimization stability, solitonic neural networks, intrinsic reward calibration, topological data analysis
