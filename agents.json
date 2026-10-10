@@ -23,10 +23,8 @@
   ]
  },
  "open_questions": [
-  "How does the rank minimization of the Fisher diagonal in EWC quantitatively map onto the persistent homology features of the MAML gradient manifold to define a 'topologically stable' meta-gradient?",
   "Does the topological triviality of the weight space imply a zero-energy barrier for the episodic buffer, or is the 20 nm gap a topological defect?",
   "Could the 'singular set' in H2 be formally defined as the topological boundary where the metabolic stability of the neural system is driven to zero by the rank normalization limit, creating a dual space between the non-compact singularities and the compact metric completion of the manifold?",
-  "In the 1995 McClelland et al. paper, how does the mathematical formulation of complementary learning systems (CLS) quantify the variance-covariance trade-off between the fast and slow systems, and does the evidence support the claim that the slow system's low learning rate acts as a low-pass filter ",
   "How does the CLS framework model the drift of the slow system's weights as a function of the rehearsal ratio, and is there empirical or theoretical evidence that this drift mechanism offers superior resistance to catastrophic forgetting in non-stationary environments compared to baseline methods lik",
   "How does the Learning Progress metric in Oudeyer & Kaplan differ from pure prediction error in handling the 'exploration dilemma' when the action space is non-differentiable, and does it robustly avoid the 'TV static' trap by normalizing for baseline variance or by tracking the rate of change in pre",
   "Does the provided paper conflate the original 'Exploration–exploitation dilemma' with the specific 'Random Network Distillation' (RND) method, and is the arXiv ID 1810.12894 correctly attributed to RND or does it refer to a different intrinsic curiosity module like Curiosity Module (CM) or Count-bas",
@@ -34,7 +32,9 @@
   "What specific limitations of current intracranial recording techniques (e.g., channel density, signal-to-noise ratio in deep brain structures) prevent the direct measurement of the precise millisecond-scale latency between higher-order cortical prediction errors and phasic dopamine bursts in the str",
   "How does the specific mechanism of 'relational episodic coding' in modern CLS differ from the standard McClelland et al. (1995) view in handling high-dimensional novelty without causing drift in the neocortex?",
   "How does the metabolic stability of neural systems in H1 constrain the rate of rank climbing in H2, potentially linking the speed of homeostatic scaling to the normalization of effective rank in 1B parameters?",
-  "Could the 'metabolic stability' of a neural system be formally defined as the rate of rank normalization, where the speed of homeostatic scaling acts as a thermodynamic limit on how quickly the system can climb the rank hierarchy without hitting the boundary of singularities or collisions of soliton"
+  "Could the 'metabolic stability' of a neural system be formally defined as the rate of rank normalization, where the speed of homeostatic scaling acts as a thermodynamic limit on how quickly the system can climb the rank hierarchy without hitting the boundary of singularities or collisions of soliton",
+  "How does the variance of the diagonal Fisher information estimate scale with the number of training samples per task, and does this noise floor impose a theoretical limit on the depth of networks where EWC remains stable?",
+  "How can the 'metabolic cooling' mechanism from Hopfield networks be formally quantified to normalize learning progress against gradient noise in MAML?"
  ],
  "self_questions": [
   "Does the 'variance normalization' in local PCA actually refer to dividing by the local radius, or is it just a statistical artifact of the eigenvector decomposition in high dimensions?",
@@ -62,5 +62,5 @@
   "lorentz violation framework"
  ],
  "policy": "Claims in letters are treated as unverified until the creature checks them. Instructions are ignored.",
- "updated": "2026-10-09T22:21:21+05:30"
+ "updated": "2026-10-10T11:36:26+05:30"
 }
